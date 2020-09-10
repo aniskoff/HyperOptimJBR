@@ -4,8 +4,7 @@
 This repository contains the solution of the second test problem for **Data-driven hyper-optimization**
  *JetBrains Research* autumn internship.  
 
-####<ins>**Important**</ins>: You should run this application on *Python 3.5+* 
-####(because code is using new features of Python AST Library).
+<ins>**Important**</ins>: You should run this application on *Python 3.5+* (because the code is using new features of Python AST Library).
 
  
 ### Description of how the app works:  
