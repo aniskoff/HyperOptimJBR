@@ -1,6 +1,7 @@
 # Copyright (c) Aniskov N.
-from typing import List
+
 import os
+from typing import List
 
 
 def read_file_to_string(filename: str) -> str:

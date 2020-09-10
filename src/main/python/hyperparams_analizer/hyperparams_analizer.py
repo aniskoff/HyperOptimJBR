@@ -1,3 +1,5 @@
+# Copyright (c) Aniskov N.
+
 import json
 
 import pandas as pd

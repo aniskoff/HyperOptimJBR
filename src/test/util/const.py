@@ -1,3 +1,5 @@
+# Copyright (c) Aniskov N.
+
 import os
 
 from src.main.util.const import ROOT_DIR
