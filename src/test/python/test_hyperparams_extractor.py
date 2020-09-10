@@ -1,4 +1,5 @@
 import json
+from typing import List, Dict, Any
 
 import pytest
 
@@ -16,7 +17,7 @@ SAMPLE_FILES = get_all_src_files_from_dir(TEST_SAMPLES_DIR)
 class TestHyperparamsExtractor:
 
     @pytest.fixture
-    def collected_data(self):
+    def collected_data(self) -> List[Dict[str, Any]]:
         write_results_to_file(samples_dir=TEST_SAMPLES_DIR, out_filename=TEST_RESULT_FILENAME)
         with open(TEST_RESULT_FILENAME) as input_json:
             return json.load(input_json)
