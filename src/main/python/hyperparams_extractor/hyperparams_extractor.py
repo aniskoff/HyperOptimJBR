@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Copyright (c) Aniskov N.
 
 import ast
@@ -42,7 +43,11 @@ class HyperparamsExtractor:
             self.__models_to_hyperparams_list.append({self.__get_func_name(node): hyperparams})
             for keyword in node.keywords:
                 if isinstance(keyword.value, ast.Constant):
-                    hyperparams[keyword.arg] = keyword.value.value
+                    hyperparams[keyword.arg] = keyword.value.value  # Python 3.8+
+                elif isinstance(keyword.value, ast.Num):
+                    hyperparams[keyword.arg] = keyword.value.n  # before Python 3.8
+                elif isinstance(keyword.value, ast.Str):
+                    hyperparams[keyword.arg] = keyword.value.s  # before Python 3.8
 
     @staticmethod
     def __get_func_name(node: ast.Call) -> str:

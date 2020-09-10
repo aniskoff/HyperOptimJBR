@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Copyright (c) Aniskov N.
 
 import json
