@@ -2,7 +2,6 @@
 
 import ast
 import json
-import os
 from typing import Dict, List, Any
 
 from src.main.util.const import SAMPLES_DIR, RESULT_FILENAME, ML_MODELS_LIST
@@ -61,6 +60,10 @@ class HyperparamsExtractor:
 
 
 def write_results_to_file(samples_dir: str = SAMPLES_DIR, out_filename: str = RESULT_FILENAME):
+    """
+    This function extracts hyperparameters from all files located in samples_dir folder,
+    creates out_filename file and writes the result of work to it.
+    """
     result = []
     for sample_filename in get_all_src_files_from_dir(samples_dir):
         hp_extractor = HyperparamsExtractor(sample_filename)
@@ -70,11 +73,7 @@ def write_results_to_file(samples_dir: str = SAMPLES_DIR, out_filename: str = RE
         json.dump(result, out_f)
 
 
-def main():
-    """
-    This function extracts hyperparameters from all files located in SAMPLES_DIR folder,
-    creates result.json file in RESULT_DIR folder and writes the result of work to it.
-    """
+def main() -> None:
     write_results_to_file(samples_dir=SAMPLES_DIR, out_filename=RESULT_FILENAME)
 
 
