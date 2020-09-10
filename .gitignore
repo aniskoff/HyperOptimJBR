@@ -1,0 +1,5 @@
+src/main/python/playground
+.pytest_cache
+.idea
+**/__pycache__
+/venv/
