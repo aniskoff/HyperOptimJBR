@@ -55,7 +55,7 @@ max           0.500000        0.10000          10.0        5.0   10.0
     `python3 -m src.main.python.hyperparams_extractor.hyperparams_extractor`
 
 ### Run Hyperparameters Analyzer as script from the repository root
-    `python3 -m src.main.python.hyperparams_extractor.hyperparams_analyzer`
+    `python3 -m src.main.python.hyperparams_analyzer.hyperparams_analyzer`
 
 ### Run tests for Hyperparameters Extractor:
 
